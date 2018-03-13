@@ -13,7 +13,7 @@ Install
 ---
 Download package by composer (or git clone to Your `~/Projects` directory)
 ```
-npm install --save-dev nodejs-as-docker
+npm i nodejs-as-docker
 ```
 
  * ExpressJS mode (default)
@@ -34,7 +34,7 @@ npm install
 
 install as-docker
 ```
-npm install --save-dev nodejs-as-docker
+npm i nodejs-as-docker
 ./node_modules/nodejs-as-docker/setup
 ```
 
