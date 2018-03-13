@@ -38,7 +38,7 @@ services:
     stdin_open: true
     tty: true
     env_file:
-       - ./.env
+       - ./docker/webapp/config.env
     labels:
        traefik.frontend.rule: "Host:{subdomain}.{name}.test,{name}.test"
     volumes:
