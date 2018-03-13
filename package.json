@@ -1,5 +1,5 @@
 {
-  "name": "test-nodejs-as-docker",
+  "name": "nodejs-as-docker",
   "version": "1.0.1",
   "description": "implement Docker into Your NodeJS project",
   "main": "setup",
