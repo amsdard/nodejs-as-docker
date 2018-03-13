@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  redis:
+    image: redis:4-alpine
+    container_name: redis.{name}.docker
+    command: 'redis-server --save "" --appendonly no'
+    stdin_open: true
+    tty: true
+    networks:
+      - global
+    restart: always
+
+  mysql:
+    image: amsdard.io/{name}/mysql:1.0
+    container_name: mysql.{name}.docker
+    build:
+        context: ./
+        dockerfile: ./docker/mysql/Dockerfile
+    stdin_open: true
+    tty: true
+    networks:
+      - global
+    env_file:
+       - ./docker/mysql/config.env
+    volumes:
+       - ~/data/mysql.{name}.docker:/var/lib/mysql
+    restart: always
+
+  webapp:
+    image: amsdard.io/{name}/webapp:1.0
+    container_name: webapp.{name}.docker
+    build:
+        context: ./
+        dockerfile: ./docker/webapp/Dockerfile
+    networks:
+      - global
+    stdin_open: true
+    tty: true
+    env_file:
+       - ./.env
+    labels:
+       traefik.frontend.rule: "Host:{subdomain}.{name}.test,{name}.test"
+    volumes:
+       - ./:/usr/src/app:cached
+       - ~/.ssh:/var/www/.ssh:cached
+    links:
+       - mysql
+       - redis
+    restart: always
+
+networks:
+  global:
+    external: true

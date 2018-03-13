@@ -1,0 +1,4 @@
+
+###> nodejs-as-docker ###
+/docker/*/*.env
+###< nodejs-as-docker ###

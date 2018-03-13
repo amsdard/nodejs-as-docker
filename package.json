@@ -1,0 +1,11 @@
+{
+  "name": "test-nodejs-as-docker",
+  "version": "1.0.0",
+  "description": "implement Docker into Your NodeJS project",
+  "main": "setup",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "krzysztof.kabala@amsterdam-standard.pl",
+  "license": "MIT"
+}
