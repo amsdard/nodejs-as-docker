@@ -1,6 +1,6 @@
 {
   "name": "nodejs-as-docker",
-  "version": "1.0.3",
+  "version": "1.1.1",
   "description": "implement Docker into Your NodeJS project",
   "main": "setup",
   "scripts": {
