@@ -33,6 +33,7 @@ yake deploy webapp
 * import `./deploy/rancher/docker-compose.yml` into Rancher + complete ENVs
 * make sure `mysql` works on specific host (Scheduling)
 * make sure `webapp` has *Health Check* enabled
+* contact Admin to enable LoadBalancer for your subdomain
 
 
 Deploy (prod)

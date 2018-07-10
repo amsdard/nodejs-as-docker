@@ -28,4 +28,4 @@ perl -pi -w -e "s/{name}/$PROJECT_NAME/g" "$PROJECT_DIR/deploy/rancher/docker-co
 perl -pi -w -e "s/{name}/$PROJECT_NAME/g" "$PROJECT_DIR/deploy/prod/docker-compose.yml"
 
 ## complete .gitignore
-cat "$VENDOR_DIR/files-$PROJECT_MODE/.gitignore" >> "$PROJECT_DIR/.gitignore"
+cat "$VENDOR_DIR/files-$PROJECT_MODE/gitignore.txt" >> "$PROJECT_DIR/.gitignore"
